@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# 🎨 Mastermind – PWA Mobile Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🇫🇷 Description (Français)
 
-Currently, two official plugins are available:
+Ce projet est une adaptation du jeu **Mastermind** sous la forme d’une **Progressive Web App (PWA)** pensée pour une utilisation mobile.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Le principe du jeu est le suivant :
+- Le joueur doit deviner un **code secret composé de couleurs**
+- Le code doit être trouvé en un **nombre limité de manches**
 
-## React Compiler
+L’objectif de ce projet est de proposer une expérience :
+- Simple et intuitive
+- Optimisée pour mobile
+- Accessible directement depuis un navigateur, sans installation via un store
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🚧 **Statut du projet : En cours de développement**  
+Certaines fonctionnalités peuvent être incomplètes ou sujettes à modification.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🇬🇧 Description (English)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project is a **Mastermind game adaptation** developed as a **mobile-first Progressive Web App (PWA)**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Game concept:
+- The player must guess a **secret color code**
+- The code has to be found within a **limited number of rounds**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The goal of this project is to provide:
+- A simple and intuitive gameplay
+- A mobile-optimized experience
+- A game playable directly in the browser, without app store installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🚧 **Project status: Work in progress**  
+Some features may be incomplete or subject to change.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Technologies (à compléter)
+
+- PWA
+- React
+- Typescript
+- Tailwindcss
+
+---
+
+## 📌 Notes
+
+Ce projet est développé à des fins d’apprentissage et d’expérimentation.  
+Les retours et suggestions sont les bienvenus.
