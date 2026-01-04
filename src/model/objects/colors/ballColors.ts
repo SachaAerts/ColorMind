@@ -1,4 +1,4 @@
-const Colors = {
+const BallColors = {
     Red: 'ball-red',
     Blue: 'ball-blue',
     Green: 'ball-green',
@@ -8,5 +8,5 @@ const Colors = {
     Empty: 'ball-empty',
 } as const;
 
-export type Color = typeof Colors[keyof typeof Colors];
-export default Colors;
+export type BallColor = typeof BallColors[keyof typeof BallColors];
+export default BallColors;

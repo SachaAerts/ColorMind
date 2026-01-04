@@ -1,10 +1,12 @@
-import { cn } from "../../../model/lib/utils.ts";
+import { cn } from "@/model/lib/utils.ts";
+import {CircleQuestionMark} from "lucide-react";
 
 interface PegProps {
     color: string;
     onClick?: () => void;
     size?: 'sm' | 'md' | 'lg';
     isInteractive?: boolean;
+    isMysteryBall?: boolean;
 }
 
 const sizeClasses = {
@@ -13,20 +15,32 @@ const sizeClasses = {
     lg: 'w-12 h-12',
 };
 
-export default function Ball({ color, onClick, size = 'md', isInteractive = false }: PegProps) {
+export default function Ball({ color, onClick, size = 'md', isInteractive = false, isMysteryBall = false }: PegProps) {
     const baseClasses = cn(
         'ball rounded-full transition-all duration-200',
         sizeClasses[size],
         color,
         isInteractive && 'cursor-pointer hover:scale-110 active:scale-95',
+        isMysteryBall && 'flex items-center justify-center'
     );
 
-    return (
-        <button
-            type="button"
-            className={baseClasses}
-            onClick={onClick}
-            disabled={!isInteractive}
-        />
-    );
+    return <>
+        {isMysteryBall ? (
+            <button
+                type="button"
+                className={baseClasses}
+                onClick={onClick}
+                disabled={!isInteractive}
+            >
+                <CircleQuestionMark className="h-5 w-auto" />
+            </button>
+        ) : (
+            <button
+                type="button"
+                className={baseClasses}
+                onClick={onClick}
+                disabled={!isInteractive}
+            />
+        )}
+    </>
 };
