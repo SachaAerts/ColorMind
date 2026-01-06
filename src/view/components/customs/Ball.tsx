@@ -7,6 +7,7 @@ interface PegProps {
     size?: 'sm' | 'md' | 'lg';
     isInteractive?: boolean;
     isMysteryBall?: boolean;
+    isSelected?: boolean;
 }
 
 const sizeClasses = {
@@ -15,13 +16,14 @@ const sizeClasses = {
     lg: 'w-12 h-12',
 };
 
-export default function Ball({ color, onClick, size = 'md', isInteractive = false, isMysteryBall = false }: PegProps) {
+export default function Ball({ color, onClick, size = 'md', isInteractive = false, isMysteryBall = false, isSelected = false }: PegProps) {
     const baseClasses = cn(
         'ball rounded-full transition-all duration-200',
         sizeClasses[size],
         color,
         isInteractive && 'cursor-pointer hover:scale-110 active:scale-95',
-        isMysteryBall && 'flex items-center justify-center'
+        isMysteryBall && 'flex items-center justify-center',
+        isSelected && 'ring-4 ring-primary ring-offset-2 ring-offset-background scale-110 animate-pulse'
     );
 
     return <>

@@ -21,6 +21,11 @@ class StatusesRounds {
         statusesRounds.push(firstLine);
         return statusesRounds;
     }
+
+    public addNewLine() {
+        const newLine: string[] = new Array(4).fill(StatusesColors.ColorNotFound);
+        this.statusesRounds.push(newLine);
+    }
 }
 
 export default StatusesRounds;
