@@ -26,6 +26,18 @@ class StatusesRounds {
         const newLine: string[] = new Array(4).fill(StatusesColors.ColorNotFound);
         this.statusesRounds.push(newLine);
     }
+
+    public setRoundResult(resultRound: string[]) {
+        for (let i = 0; i < resultRound.length; i++) {
+            this.statusesRounds[this.statusesRounds.length - 1][i] = resultRound[i];
+        }
+    }
+
+    public clone(): StatusesRounds {
+        const clonedStatusesRounds = Object.create(StatusesRounds.prototype);
+        clonedStatusesRounds.statusesRounds = this.statusesRounds.map(line => [...line]);
+        return clonedStatusesRounds;
+    }
 }
 
 export default StatusesRounds;

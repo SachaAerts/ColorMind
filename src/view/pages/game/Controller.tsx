@@ -24,23 +24,25 @@ export default function Controller({gameBoard, setGameBoard, selectedBall, setSe
     const changeBallColor = (selectedBall: [number, number] | null, color: string) => {
         if(selectedBall !== null) {
             gameBoard.changeBallColor(selectedBall[0], selectedBall[1], color);
-            setGameBoard(Object.assign(Object.create(Object.getPrototypeOf(gameBoard)), gameBoard));
+            setGameBoard(gameBoard.clone());
             setSelectedBall(null)
         }
     }
 
     const passToNextRound = () => {
         if (game.actualRound == 10) {
-            //TODO: Il faudrait ajouter pour faire en sorte de vérifier les points de la manche avant de la skip
             navigate("/");
         } else {
+            const statusesRound = game.finishRound(gameBoard.getLastLine());
+            statusesRounds.setRoundResult(statusesRound)
+
             game.passToNextRound();
             gameBoard.addNewLine();
             statusesRounds.addNewLine();
 
-            setGame(Object.assign(Object.create(Object.getPrototypeOf(game)), game));
-            setGameBoard(Object.assign(Object.create(Object.getPrototypeOf(gameBoard)), gameBoard));
-            setStatusesRounds(Object.assign(Object.create(Object.getPrototypeOf(statusesRounds)), statusesRounds));
+            setGame(game.clone());
+            setGameBoard(gameBoard.clone());
+            setStatusesRounds(statusesRounds.clone());
         }
     }
 

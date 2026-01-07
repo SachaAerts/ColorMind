@@ -7,9 +7,9 @@ import Controller from "@/view/pages/game/Controller.tsx";
 import Game from "@/model/objects/game.ts";
 
 export default function GamePage() {
-    const [game, setGame] = useState(new Game());
-    const [gameBoard, setGameBoard] = useState<Board>(new Board());
-    const [statusesRound, setStatusesRound] = useState<StatusesRounds>(new StatusesRounds());
+    const [game, setGame] = useState(() => new Game());
+    const [gameBoard, setGameBoard] = useState<Board>(() => new Board());
+    const [statusesRound, setStatusesRound] = useState<StatusesRounds>(() => new StatusesRounds());
     const [selectedBall, setSelectedBall] = useState<[number, number] | null>(null);
 
     const isBallSelected = (i: number, j: number) => {

@@ -35,6 +35,16 @@ class Board {
         const newLine: string[] = new Array(4).fill(BallColors.Empty);
         this.board.push(newLine);
     }
+
+    public getLastLine() {
+        return this.board[this.board.length - 1];
+    }
+
+    public clone(): Board {
+        const clonedGame = Object.create(Board.prototype);
+        clonedGame.board = this.board.map(line => [...line]);
+        return clonedGame;
+    }
 }
 
 export default Board;

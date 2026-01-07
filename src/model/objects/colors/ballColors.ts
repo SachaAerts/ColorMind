@@ -10,3 +10,12 @@ const BallColors = {
 
 export type BallColor = typeof BallColors[keyof typeof BallColors];
 export default BallColors;
+
+export const PLAYABLE_COLORS = [
+    BallColors.Red,
+    BallColors.Blue,
+    BallColors.Green,
+    BallColors.Yellow,
+    BallColors.Orange,
+    BallColors.Cyan,
+];
