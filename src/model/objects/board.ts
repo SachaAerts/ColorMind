@@ -40,6 +40,10 @@ class Board {
         return this.board[this.board.length - 1];
     }
 
+    public resetLastLine() {
+        this.board[this.board.length - 1].fill(BallColors.Empty);
+    }
+
     public clone(): Board {
         const clonedGame = Object.create(Board.prototype);
         clonedGame.board = this.board.map(line => [...line]);
