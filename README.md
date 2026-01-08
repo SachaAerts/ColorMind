@@ -1,6 +1,6 @@
-# 🎨 Mastermind – PWA Mobile Game
+# Mastermind – PWA Mobile Game
 
-## 🇫🇷 Description (Français)
+## Description (Français)
 
 Ce projet est une adaptation du jeu **Mastermind** sous la forme d’une **Progressive Web App (PWA)** pensée pour une utilisation mobile.
 
@@ -13,12 +13,12 @@ L’objectif de ce projet est de proposer une expérience :
 - Optimisée pour mobile
 - Accessible directement depuis un navigateur, sans installation via un store
 
-🚧 **Statut du projet : En cours de développement**  
+**Statut du projet : En cours de développement**  
 Certaines fonctionnalités peuvent être incomplètes ou sujettes à modification.
 
 ---
 
-## 🇬🇧 Description (English)
+## Description (English)
 
 This project is a **Mastermind game adaptation** developed as a **mobile-first Progressive Web App (PWA)**.
 
@@ -31,12 +31,12 @@ The goal of this project is to provide:
 - A mobile-optimized experience
 - A game playable directly in the browser, without app store installation
 
-🚧 **Project status: Work in progress**  
+**Project status: Work in progress**  
 Some features may be incomplete or subject to change.
 
 ---
 
-## 🛠️ Technologies (à compléter)
+## Technologies
 
 - PWA
 - React
@@ -45,7 +45,7 @@ Some features may be incomplete or subject to change.
 
 ---
 
-## 📌 Notes
+## Notes
 
 Ce projet est développé à des fins d’apprentissage et d’expérimentation.  
 Les retours et suggestions sont les bienvenus.
